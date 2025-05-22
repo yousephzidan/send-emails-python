@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 def send_email(title: str, content, email: str):
     msg = MIMEText(content)
     msg["Subject"] = title
-    msg["From"] = "email_you_created_in_brevosend.com" # Use the same email you sigined in with at brevosend.com to send the emails
+    msg["From"] = "email_you_created_in_brevosend.com" # Use the same email you sigined in with at brevo.com to send the emails
     msg["To"] = email 
 
     with smtplib.SMTP("smtp-relay.brevo.com", 587) as server:
